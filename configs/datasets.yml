@@ -1,0 +1,9 @@
+# configuration for datasets
+# dataset_base: the base path for all datasets
+dataset_base: 'datasets'
+datasets: ['CBF', 'Coffee', 'DisPhaTW', 'ECG5000', 'ECGFiveDays', 'FaceAll', 'GunPoint',
+           'InsWinSou', 'MidPhaOutCor', 'NonInvFetECGTho2', 'OliveOil', 'Plane', 'ShapeletSim',
+           'Trace', 'TwoPatterns', 'UWavGesLibAll', 'UWavGesLibX', 'UWavGesLibY', 'UWavGesLibZ']
+split: null
+return_type: 'numpy2d'
+return_X_y: true

@@ -1,9 +1,19 @@
 # configuration for datasets
 # dataset_base: the base path for all datasets
 dataset_base: 'datasets'
-datasets: ['CBF', 'Coffee', 'DisPhaTW', 'ECG5000', 'ECGFiveDays', 'FaceAll', 'GunPoint',
-           'InsWinSou', 'MidPhaOutCor', 'NonInvFetECGTho2', 'OliveOil', 'Plane', 'ShapeletSim',
-           'Trace', 'TwoPatterns', 'UWavGesLibAll', 'UWavGesLibX', 'UWavGesLibY', 'UWavGesLibZ']
+datasets: ['CBF', 'Coffee', 'DistalPhalanxTW', 'ECG5000', 'ECGFiveDays', 'FaceAll', 'GunPoint',
+           'InsectWingbeatSound', 'MiddlePhalanxOutlineCorrect', 'NonInvasiveFetalECGThorax2', 'OliveOil', 'Plane', 'ShapeletSim',
+           'Trace', 'TwoPatterns', 'UWaveGestureLibraryAll', 'UWaveGestureLibraryX', 'UWaveGestureLibraryY', 'UWaveGestureLibraryZ']
+# split: 'Train', 'Test', or null to return both train and test.
 split: null
+# return_type: valid Panel mtype str or None
+# null = 'nested_univ'
+# commonly used specifications:
+# 'nested_univ': nested pd.DataFrame, pd.Series in cells
+# 'numpy2d'/'np2d'/'numpyflat': 2D numpy.ndarray (instance, time idx)
+# 'numpy3d'/'numpy3D'/'np3D': 3D numpy.ndarray (instance, variable, time idx)
+# 'pd-multiindex': pd.DataFrame with 2-level (instance, time) MultiIndex
 return_type: 'numpy2d'
+# return_X_y: if True, returns (features, target) separately,
+# otherwise, a single dataframe with columns for features and the target.
 return_X_y: true

@@ -17,7 +17,7 @@ Install [sktime](https://github.com/sktime/sktime#hourglass_flowing_sand-install
 This is an optional one-time task. Downloading all datasets used for evaluation in this project via `task_download_datasets.py`.
 
 ```bash
-python task_download_datasets.py
+python task_download_datasets.py --config configs/datasets.yml
 ```
 
 ## Evaluate baseline TSCs

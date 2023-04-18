@@ -6,8 +6,8 @@
 import argparse
 import os
 
-from file import parse_yaml
-from data import load_dataset
+from utils.file import parse_yaml
+from utils.data import load_dataset
 
 
 def download_datasets(configs):

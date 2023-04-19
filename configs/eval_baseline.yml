@@ -1,0 +1,10 @@
+# configurations for evaluating baseline models
+exp:  # experiment settings
+  model_base: ''
+  models: ['rocket', 'minirocket']
+  output_base: ''
+rocket:
+  filename: ''
+  num_kenels: 2000
+minirocket:
+  filename: ''

@@ -1,7 +1,7 @@
 # GMU-CS695-Spring23
  
 ## Setup Development Environment
-Install [sktime](https://github.com/sktime/sktime#hourglass_flowing_sand-install-sktime).
+Install [sktime](https://github.com/sktime/sktime#hourglass_flowing_sand-install-sktime) and [networkx](https://pypi.org/project/networkx/).
 
 ## Structure
 

@@ -1,6 +1,6 @@
 """Pipeline - train and evaluate baseline minirocket.
 
-@author: Ying
+@author: Ying & Chuxiong
 @email: y(dot)meng201011(at)gmail(dot)com
 """
 import os
@@ -17,9 +17,11 @@ from sktime.transformations.panel.rocket import MiniRocket
 
 from utils.data import load_dataset
 
-datasets = ['CBF', 'Coffee', 'DistalPhalanxTW', 'ECG5000', 'ECGFiveDays', 'FaceAll', 
-            'GunPoint', 'InsectWingbeatSound', 'MiddlePhalanxOutlineCorrect', 'NonInvasiveFetalECGThorax2', 'OliveOil', 'Plane', 'ShapeletSim',
+effective_datasets = ['CBF', 'Coffee', 'DistalPhalanxTW', 'ECG5000', 'ECGFiveDays', 'FaceAll', 
+            'GunPoint', 'InsectWingbeatSound', 'MiddlePhalanxOutlineCorrect', 'NonInvasiveFetalECGThorax2', 'OliveOil', 'Plane', 'ProximalPhalanxTW', 'ShapeletSim',
             'Trace', 'TwoPatterns', 'UWaveGestureLibraryAll', 'UWaveGestureLibraryX', 'UWaveGestureLibraryY', 'UWaveGestureLibraryZ']
+ineffective_datasets = ['CinCECGTorso', 'Earthquakes', 'Ham', 'Herring', 'MedicalImages', 'Phoneme', 'ScreenType', 'WordSynonyms', 'Worms']
+datasets = effective_datasets + ineffective_datasets
 
 num_rounds = 5
 num_kernels = 10000
@@ -77,7 +79,7 @@ if __name__ == '__main__':
     eval_analysis = [
         ['model', 'dataset', 'acc_train_mean', 'acc_test_mean', 'time_train_mean', 'time_test_mean']
     ]
-    for dataset in datasets:
+    for dataset in effective_datasets:
         print(f'[INFO] Evaluating on {dataset}')
         eval_rounds = [0, 0, 0, 0]  # acc_train, acc_test, time_train, time_test
         eval_path = os.path.join('exp', 'eval', dataset)
@@ -107,7 +109,7 @@ if __name__ == '__main__':
         filename = f'eval_analysis-minirocket-{dataset}.csv'
         filepath = os.path.join(eval_path, filename)
         print(f'[INFO] Save evaluation analysis to {filepath}')
-        report = pd.DataFrame(eval_analysis[-2:], columns=eval_analysis[0])
+        report = pd.DataFrame(eval_analysis[-1:], columns=eval_analysis[0])
         report.to_csv(filepath, index=False)
         print('='*80)
         

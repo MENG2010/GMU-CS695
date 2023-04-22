@@ -1,6 +1,6 @@
 """Pipeline - train and evaluate baseline rocket.
 
-@author: Ying
+@author: Ying & Chuxiong
 @email: y(dot)meng201011(at)gmail(dot)com
 """
 import os
@@ -17,9 +17,11 @@ from sktime.transformations.panel.rocket import Rocket, MiniRocket
 
 from utils.data import load_dataset
 
-datasets = ['CBF', 'Coffee', 'DistalPhalanxTW', 'ECG5000', 'ECGFiveDays', 'FaceAll', 
-            'GunPoint', 'InsectWingbeatSound', 'MiddlePhalanxOutlineCorrect', 'NonInvasiveFetalECGThorax2', 'OliveOil', 'Plane', 'ShapeletSim',
+effective_datasets = ['CBF', 'Coffee', 'DistalPhalanxTW', 'ECG5000', 'ECGFiveDays', 'FaceAll', 
+            'GunPoint', 'InsectWingbeatSound', 'MiddlePhalanxOutlineCorrect', 'NonInvasiveFetalECGThorax2', 'OliveOil', 'Plane', 'ProximalPhalanxTW', 'ShapeletSim',
             'Trace', 'TwoPatterns', 'UWaveGestureLibraryAll', 'UWaveGestureLibraryX', 'UWaveGestureLibraryY', 'UWaveGestureLibraryZ']
+ineffective_datasets = ['CinCECGTorso', 'Earthquakes', 'Ham', 'Herring', 'MedicalImages', 'Phoneme', 'ScreenType', 'WordSynonyms', 'Worms']
+datasets = effective_datasets + ineffective_datasets
 
 num_rounds = 5
 num_kernels = 10000
@@ -110,7 +112,7 @@ if __name__ == '__main__':
         filename = f'eval_analysis-rocket-{dataset}.csv'
         filepath = os.path.join(eval_path, filename)
         print(f'[INFO] Save evaluation analysis to {filepath}')
-        report = pd.DataFrame(eval_analysis[-2:], columns=eval_analysis[0])
+        report = pd.DataFrame(eval_analysis[-1:], columns=eval_analysis[0])
         report.to_csv(filepath, index=False)
         print('='*80)
         

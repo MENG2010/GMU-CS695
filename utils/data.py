@@ -19,11 +19,11 @@ from sktime.utils.validation._dependencies import _check_soft_dependencies
 
 
 # base path for datasets
-MODULE = os.path.dirname(os.getcwd())
+MODULE = os.path.dirname('datasets')
 def load_dataset(name: str,
                  split: str=None,
                  return_X_y: bool=True,
-                 return_type: str='numpy2d',
+                 return_type: str='np3d',
                  downloaded_path: str=None,):
     """Load dataset by name.
 
@@ -37,7 +37,7 @@ def load_dataset(name: str,
         X: sktime data container.
         y: 1D numpy array of target values.
     """
-    downloaded_path = os.getcwd() if not downloaded_path else downloaded_path
+    downloaded_path = 'datasets' if not downloaded_path else downloaded_path
     extracted_path = os.path.join(downloaded_path, name)
     print(f'[INFO] loading {name} dataset from {extracted_path}')
     return _load_dataset(name=name, 

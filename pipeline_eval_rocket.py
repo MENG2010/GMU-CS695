@@ -1,6 +1,6 @@
 """Pipeline - train and evaluate baseline rocket.
 
-@author: Ying
+@author: Ying & Chuxiong
 @email: y(dot)meng201011(at)gmail(dot)com
 """
 import os
@@ -17,9 +17,11 @@ from sktime.transformations.panel.rocket import Rocket, MiniRocket
 
 from utils.data import load_dataset
 
-datasets = ['CBF', 'Coffee', 'DistalPhalanxTW', 'ECG5000', 'ECGFiveDays', 'FaceAll', 
-            'GunPoint', 'InsectWingbeatSound', 'MiddlePhalanxOutlineCorrect', 'NonInvasiveFetalECGThorax2', 'OliveOil', 'Plane', 'ShapeletSim',
+effective_datasets = ['CBF', 'Coffee', 'DistalPhalanxTW', 'ECG5000', 'ECGFiveDays', 'FaceAll', 
+            'GunPoint', 'InsectWingbeatSound', 'MiddlePhalanxOutlineCorrect', 'NonInvasiveFetalECGThorax2', 'OliveOil', 'Plane', 'ProximalPhalanxTW', 'ShapeletSim',
             'Trace', 'TwoPatterns', 'UWaveGestureLibraryAll', 'UWaveGestureLibraryX', 'UWaveGestureLibraryY', 'UWaveGestureLibraryZ']
+ineffective_datasets = ['CinCECGTorso', 'Earthquakes', 'Ham', 'Herring', 'MedicalImages', 'Phoneme', 'ScreenType', 'WordSynonyms', 'Worms']
+datasets = effective_datasets + ineffective_datasets
 
 num_rounds = 5
 num_kernels = 10000

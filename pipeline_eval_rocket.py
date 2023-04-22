@@ -122,7 +122,7 @@ if __name__ == '__main__':
     print('[INFO] Done evaluating Rocket-Ridge.')
     
     filename = f'eval_analysis-rocket.csv'
-    filepath = os.path.join('exp/eval',, filename)
+    filepath = os.path.join('exp/eval', filename)
     print(f'[INFO] Save evaluation analysis to {filepath}')
     report = pd.DataFrame(eval_analysis[1:], columns=eval_analysis[0])
     report.to_csv(filepath, index=False)

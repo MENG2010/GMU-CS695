@@ -1,5 +1,5 @@
 """Calculate critical difference and plot CD-diagram.
-Scripts was from https://github.com/hfawaz/cd-diagram
+Scripts was from https://github.com/hfawaz/cd-diagram, with minor updates for GMU-CS695 project.
 """
 # Author: Hassan Ismail Fawaz <hassan.ismail-fawaz@uha.fr>
 #         Germain Forestier <germain.forestier@uha.fr>
@@ -289,7 +289,6 @@ def draw_cd_diagram(df_perf=None, alpha=0.05, title=None, labels=False, filepath
 
     for p in p_values:
         print(p)
-
 
     graph_ranks(average_ranks.values, average_ranks.keys(), p_values,
                 cd=None, reverse=True, width=9, textspace=1.5, labels=labels)

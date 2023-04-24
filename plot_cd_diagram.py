@@ -14,4 +14,5 @@ report_path = 'exp/eval'
 report_filename = 'eval_all.csv'
 
 report = pd.read_csv(os.path.join(report_path, report_filename), index_col=False)
-draw_cd_diagram(df_perf=report, title='Accuracy', labels=True)
+fig_filepath = 'exp/analysis/cd-diagram-eval.png'
+draw_cd_diagram(df_perf=report, title='Accuracy', labels=True, filepath=fig_filepath)

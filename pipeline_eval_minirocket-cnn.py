@@ -21,13 +21,14 @@ effective_datasets = ['CBF', 'Coffee', 'DistalPhalanxTW', 'ECG5000', 'ECGFiveDay
             'GunPoint', 'InsectWingbeatSound', 'MiddlePhalanxOutlineCorrect', 'NonInvasiveFetalECGThorax2', 'OliveOil', 'Plane', 'ProximalPhalanxTW', 'ShapeletSim',
             'Trace', 'TwoPatterns', 'UWaveGestureLibraryAll', 'UWaveGestureLibraryX', 'UWaveGestureLibraryY', 'UWaveGestureLibraryZ']
 ineffective_datasets = ['CinCECGTorso', 'Earthquakes', 'Ham', 'Herring', 'MedicalImages', 'Phoneme', 'ScreenType', 'WordSynonyms', 'Worms']
-# datasets = effective_datasets + ineffective_datasets
-datasets = ['Coffee', 'Phoneme']
+datasets = effective_datasets + ineffective_datasets
+#datasets = ['Coffee', 'Phoneme']
 
 
-num_rounds = 1
+num_rounds = 5
 num_kernels = 10000
 n_jobs = 6
+n_epochs = 1000
 
 def train(dataset):
     # load training dataset
@@ -48,7 +49,7 @@ def train(dataset):
     classifier = CNNClassifier(
         kernel_size=2,
         n_conv_layers=1,
-        n_epochs=20, 
+        n_epochs=n_epochs, 
         activation='linear',
         verbose=0)
     # classifier = LSTMFCNClassifier(
@@ -94,7 +95,6 @@ if __name__ == '__main__':
         for r in range(num_rounds):
             model_path = os.path.join('exp', 'models', 'minirocket-cnn', dataset, f'round-{r}')
             Path(model_path).mkdir(parents=True, exist_ok=True)
-            # Path(os.path.join(eval_path, f'round-{r}')).mkdir(parents=True, exist_ok=True)
             
             extractor, classifier, time_train, acc_train, train_size = train(dataset=dataset)
             # save trained model

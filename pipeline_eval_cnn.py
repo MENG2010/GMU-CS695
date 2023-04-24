@@ -18,10 +18,12 @@ effective_datasets = ['CBF', 'Coffee', 'DistalPhalanxTW', 'ECG5000', 'ECGFiveDay
             'Trace', 'TwoPatterns', 'UWaveGestureLibraryAll', 'UWaveGestureLibraryX', 'UWaveGestureLibraryY', 'UWaveGestureLibraryZ']
 ineffective_datasets = ['CinCECGTorso', 'Earthquakes', 'Ham', 'Herring', 'MedicalImages', 'Phoneme', 'ScreenType', 'WordSynonyms', 'Worms']
 datasets = effective_datasets + ineffective_datasets
+#datasets = ['Coffee', 'DistalPhalanxTW', 'Earthquakes']
 
 num_rounds = 5
-num_kernels = 25
+num_kernels = 16
 n_jobs = 6
+n_epochs = 1000
 
 def train(dataset):
     # load training dataset
@@ -34,7 +36,7 @@ def train(dataset):
     print(f'[INFO] Training cnn classifier on {dataset}...')
     classifier = CNNClassifier(
         kernel_size=num_kernels, 
-        n_epochs=100, verbose=False)
+        n_epochs=n_epochs, verbose=0)
     
     classifier.fit(X_train, y_train)
     train_cost = time.monotonic() - start_time

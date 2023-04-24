@@ -20,24 +20,25 @@ effective_datasets = ['CBF', 'Coffee', 'DistalPhalanxTW', 'ECG5000', 'ECGFiveDay
             'GunPoint', 'InsectWingbeatSound', 'MiddlePhalanxOutlineCorrect', 'NonInvasiveFetalECGThorax2', 'OliveOil', 'Plane', 'ProximalPhalanxTW', 'ShapeletSim',
             'Trace', 'TwoPatterns', 'UWaveGestureLibraryAll', 'UWaveGestureLibraryX', 'UWaveGestureLibraryY', 'UWaveGestureLibraryZ']
 ineffective_datasets = ['CinCECGTorso', 'Earthquakes', 'Ham', 'Herring', 'MedicalImages', 'Phoneme', 'ScreenType', 'WordSynonyms', 'Worms']
-# datasets = effective_datasets + ineffective_datasets
-datasets = ['Coffee', 'Phoneme']
+datasets = effective_datasets + ineffective_datasets
+#datasets = ['Coffee', 'Phoneme']
 
-num_rounds = 1
+num_rounds = 5
 num_kernels = 10000
 n_jobs = 6
+n_epochs = 1000
 
 def train(dataset):
     # load training dataset
     print(f'[INFO] Loading training dataset...')
     X_train, y_train = load_dataset(name=dataset, split='train', return_X_y=True)
-    print(f'[INFO] type: {type(X_train)}; X_train.shape: {X_train.shape}')
+    #print(f'[INFO] type: {type(X_train)}; X_train.shape: {X_train.shape}')
     
     start_time = time.monotonic()
     # fit a classifier
     print(f'[INFO] Training cnn classifier on {dataset}...')
     extractor = Rocket(num_kernels=num_kernels, n_jobs=n_jobs)
-    print(f'[INFO] X_train.type: {type(X_train)}; X_train.shape: {X_train.shape}')
+    #print(f'[INFO] X_train.type: {type(X_train)}; X_train.shape: {X_train.shape}')
     extractor.fit(X_train)
     X_train = extractor.transform(X_train).to_numpy()
     X_train = reshape(X_train, extractor='rocket')
@@ -46,7 +47,7 @@ def train(dataset):
     classifier = CNNClassifier(
         kernel_size=2,
         n_conv_layers=1,
-        n_epochs=20, 
+        n_epochs=n_epochs, 
         activation='linear',
         verbose=0)
         

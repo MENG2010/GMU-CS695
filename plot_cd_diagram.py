@@ -7,7 +7,7 @@ import os
 from pathlib import Path
 import pandas as pd
 
-from metric.cd_diagram import draw_cd_diagram
+from plot.cd_diagram import draw_cd_diagram
 
 
 report_path = 'exp/eval'

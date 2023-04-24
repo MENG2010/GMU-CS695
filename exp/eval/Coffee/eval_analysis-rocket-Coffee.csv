@@ -1,0 +1,2 @@
+model,dataset,acc_train_mean,acc_test_mean,time_train_mean,time_test_mean
+rocket-ridge,Coffee,1.0,1.0,0.3631463831290603,0.2463722163811326

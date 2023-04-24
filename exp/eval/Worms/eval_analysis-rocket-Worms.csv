@@ -1,0 +1,2 @@
+model,dataset,acc_train_mean,acc_test_mean,time_train_mean,time_test_mean
+rocket-ridge,Worms,1.0,0.7246753246753247,3.241198679432273,1.3652686962857843

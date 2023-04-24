@@ -1,0 +1,2 @@
+model,dataset,acc_train_mean,acc_test_mean,time_train_mean,time_test_mean
+minirocket-ridge,UWaveGestureLibraryZ,0.9908482142857142,0.8000558347292015,0.8662498503923416,1.8004701787605881

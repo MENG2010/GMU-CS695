@@ -1,0 +1,2 @@
+model,dataset,acc_train_mean,acc_test_mean,time_train_mean,time_test_mean
+minirocket-svm,GunPoint,1.0,0.9933333333333334,0.1340679917484522,0.08503425177186727

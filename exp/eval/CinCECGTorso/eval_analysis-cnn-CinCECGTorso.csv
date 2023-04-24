@@ -1,0 +1,2 @@
+model,dataset,acc_train_mean,acc_test_mean,time_train_mean,time_test_mean
+rocket-cnn,CinCECGTorso,1.0,0.7314492753623189,26.198045883886515,52.4439247533679

@@ -1,0 +1,2 @@
+model,dataset,acc_train_mean,acc_test_mean,time_train_mean,time_test_mean
+rocket-ridge,Phoneme,1.0,0.2800632911392405,4.23997710943222,34.97711288053542

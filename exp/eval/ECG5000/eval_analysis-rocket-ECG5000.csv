@@ -1,0 +1,2 @@
+model,dataset,acc_train_mean,acc_test_mean,time_train_mean,time_test_mean
+rocket-ridge,ECG5000,0.9960000000000001,0.9471111111111112,1.6681806260719896,11.901090323925018

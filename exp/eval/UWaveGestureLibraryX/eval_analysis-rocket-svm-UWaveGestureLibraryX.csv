@@ -1,0 +1,2 @@
+model,dataset,acc_train_mean,acc_test_mean,time_train_mean,time_test_mean
+rocket-svm,UWaveGestureLibraryX,1.0,0.8432719151312117,8.288220498338342,39.95179447159171

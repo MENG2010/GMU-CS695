@@ -1,0 +1,2 @@
+model,dataset,acc_train_mean,acc_test_mean,time_train_mean,time_test_mean
+minirocket-ridge,Earthquakes,1.0,0.7453237410071942,0.47852689791470765,0.15953427106142043

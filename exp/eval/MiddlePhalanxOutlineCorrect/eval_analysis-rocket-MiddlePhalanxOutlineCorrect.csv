@@ -1,0 +1,2 @@
+model,dataset,acc_train_mean,acc_test_mean,time_train_mean,time_test_mean
+rocket-ridge,MiddlePhalanxOutlineCorrect,0.9996666666666666,0.8398625429553265,1.34615510571748,0.5490010272711515

@@ -1,0 +1,2 @@
+model,dataset,acc_train_mean,acc_test_mean,time_train_mean,time_test_mean
+minirocket-ridge,ScreenType,0.9674666666666667,0.4794666666666666,0.6457751905545592,0.43279569372534754

@@ -1,0 +1,2 @@
+model,dataset,acc_train_mean,acc_test_mean,time_train_mean,time_test_mean
+minirocket-ridge,Worms,1.0,0.7558441558441559,0.47346835639327767,0.1629117177799344

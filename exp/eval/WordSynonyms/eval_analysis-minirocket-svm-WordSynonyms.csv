@@ -1,0 +1,2 @@
+model,dataset,acc_train_mean,acc_test_mean,time_train_mean,time_test_mean
+minirocket-svm,WordSynonyms,1.0,0.7031347962382446,0.40449279099702834,0.7554553342983127

@@ -1,0 +1,2 @@
+model,dataset,acc_train_mean,acc_test_mean,time_train_mean,time_test_mean
+rocket-cnn,Worms,1.0,0.631168831168831,105.60523562226444,2.0649248782545326

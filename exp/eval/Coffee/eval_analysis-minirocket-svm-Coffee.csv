@@ -1,0 +1,2 @@
+model,dataset,acc_train_mean,acc_test_mean,time_train_mean,time_test_mean
+minirocket-svm,Coffee,1.0,1.0,0.1415321769192815,0.06127341613173485

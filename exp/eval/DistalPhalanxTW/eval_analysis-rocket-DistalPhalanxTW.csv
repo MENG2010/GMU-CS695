@@ -1,0 +1,2 @@
+model,dataset,acc_train_mean,acc_test_mean,time_train_mean,time_test_mean
+rocket-ridge,DistalPhalanxTW,1.0,0.6949640287769785,0.9852311043068767,0.33911029901355505

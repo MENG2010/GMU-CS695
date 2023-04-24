@@ -1,0 +1,2 @@
+model,dataset,acc_train_mean,acc_test_mean,time_train_mean,time_test_mean
+rocket-ridge,ScreenType,0.9904,0.48053333333333337,5.19200082924217,4.937064097635448

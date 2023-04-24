@@ -1,0 +1,2 @@
+model,dataset,acc_train_mean,acc_test_mean,time_train_mean,time_test_mean
+cnn,ECG5000,0.9984,0.9286666666666668,51.14954684488475,0.3864138159900904

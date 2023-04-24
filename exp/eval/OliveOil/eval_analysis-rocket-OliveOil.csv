@@ -1,0 +1,2 @@
+model,dataset,acc_train_mean,acc_test_mean,time_train_mean,time_test_mean
+rocket-ridge,OliveOil,1.0,0.9133333333333333,0.5159892681986094,0.4021338768303394

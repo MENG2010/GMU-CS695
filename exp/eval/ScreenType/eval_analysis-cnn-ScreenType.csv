@@ -1,0 +1,2 @@
+model,dataset,acc_train_mean,acc_test_mean,time_train_mean,time_test_mean
+rocket-cnn,ScreenType,0.7722666666666667,0.4106666666666666,212.60372236818074,8.601280506700277

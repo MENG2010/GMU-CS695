@@ -1,0 +1,2 @@
+model,dataset,acc_train_mean,acc_test_mean,time_train_mean,time_test_mean
+minirocket-ridge,WordSynonyms,1.0,0.760501567398119,0.324995868653059,0.3100754899904132

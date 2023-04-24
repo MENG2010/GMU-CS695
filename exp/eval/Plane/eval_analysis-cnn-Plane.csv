@@ -1,0 +1,2 @@
+model,dataset,acc_train_mean,acc_test_mean,time_train_mean,time_test_mean
+rocket-cnn,Plane,0.8552380952380952,0.8400000000000001,59.58486388232559,1.5121215274557471

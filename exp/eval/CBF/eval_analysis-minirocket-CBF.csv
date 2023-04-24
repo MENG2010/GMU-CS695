@@ -1,0 +1,2 @@
+model,dataset,acc_train_mean,acc_test_mean,time_train_mean,time_test_mean
+minirocket-ridge,CBF,1.0,0.9988888888888889,0.19938729777932168,0.24415134862065316

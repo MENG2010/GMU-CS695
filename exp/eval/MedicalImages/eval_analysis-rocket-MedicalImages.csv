@@ -1,0 +1,2 @@
+model,dataset,acc_train_mean,acc_test_mean,time_train_mean,time_test_mean
+rocket-ridge,MedicalImages,0.979002624671916,0.7984210526315788,1.0622608680278063,1.4884400783106684

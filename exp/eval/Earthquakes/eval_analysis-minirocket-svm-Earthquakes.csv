@@ -1,0 +1,2 @@
+model,dataset,acc_train_mean,acc_test_mean,time_train_mean,time_test_mean
+minirocket-svm,Earthquakes,1.0,0.7122302158273381,0.6663419673219323,0.20628882758319378

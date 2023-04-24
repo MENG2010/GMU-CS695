@@ -1,0 +1,2 @@
+model,dataset,acc_train_mean,acc_test_mean,time_train_mean,time_test_mean
+minirocket-ridge,FaceAll,1.0,0.805680473372781,0.3969158647581935,0.4283642554655671

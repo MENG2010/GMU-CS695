@@ -1,0 +1,2 @@
+model,dataset,acc_train_mean,acc_test_mean,time_train_mean,time_test_mean
+minirocket-ridge,TwoPatterns,1.0,0.9970000000000001,0.6680714583024383,0.9927109537646175

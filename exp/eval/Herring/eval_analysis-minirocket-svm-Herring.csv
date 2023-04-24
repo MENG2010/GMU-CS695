@@ -1,0 +1,2 @@
+model,dataset,acc_train_mean,acc_test_mean,time_train_mean,time_test_mean
+minirocket-svm,Herring,1.0,0.6625,0.1945769289508462,0.09788661263883114

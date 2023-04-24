@@ -1,0 +1,2 @@
+model,dataset,acc_train_mean,acc_test_mean,time_train_mean,time_test_mean
+minirocket-ridge,CinCECGTorso,1.0,0.8657971014492754,0.3372733578085899,3.2117225812748074

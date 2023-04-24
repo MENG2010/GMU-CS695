@@ -1,0 +1,2 @@
+model,dataset,acc_train_mean,acc_test_mean,time_train_mean,time_test_mean
+minirocket-svm,ShapeletSim,1.0,1.0,0.1656879547983408,0.17574296575039625

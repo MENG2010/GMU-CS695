@@ -1,0 +1,2 @@
+model,dataset,acc_train_mean,acc_test_mean,time_train_mean,time_test_mean
+minirocket-ridge,InsectWingbeatSound,1.0,0.6759595959595959,0.280806384421885,0.8223493216559291

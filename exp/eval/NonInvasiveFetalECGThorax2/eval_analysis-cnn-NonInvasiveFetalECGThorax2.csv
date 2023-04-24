@@ -1,0 +1,2 @@
+model,dataset,acc_train_mean,acc_test_mean,time_train_mean,time_test_mean
+rocket-cnn,NonInvasiveFetalECGThorax2,0.9345555555555556,0.8964885496183206,1100.4302357075735,48.19696309622377

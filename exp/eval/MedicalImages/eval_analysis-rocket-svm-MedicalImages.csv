@@ -1,0 +1,2 @@
+model,dataset,acc_train_mean,acc_test_mean,time_train_mean,time_test_mean
+rocket-svm,MedicalImages,1.0,0.8102631578947367,2.161871453374624,3.564319556578994

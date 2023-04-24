@@ -1,0 +1,2 @@
+model,dataset,acc_train_mean,acc_test_mean,time_train_mean,time_test_mean
+cnn,ECGFiveDays,1.0,0.9955865272938442,4.247917079553008,0.11503946669399738

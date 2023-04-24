@@ -1,0 +1,2 @@
+model,dataset,acc_train_mean,acc_test_mean,time_train_mean,time_test_mean
+rocket-ridge,ShapeletSim,1.0,1.0,0.4435166772454977,1.6933082990348338

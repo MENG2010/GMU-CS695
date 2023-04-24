@@ -1,0 +1,2 @@
+model,dataset,acc_train_mean,acc_test_mean,time_train_mean,time_test_mean
+rocket-cnn,MiddlePhalanxOutlineCorrect,0.9926666666666666,0.8274914089347079,329.1157394286245,3.8613197891041637

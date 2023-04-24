@@ -1,0 +1,2 @@
+model,dataset,acc_train_mean,acc_test_mean,time_train_mean,time_test_mean
+rocket-cnn,WordSynonyms,0.8614232209737829,0.6269592476489028,159.16552356220782,9.85543919634074

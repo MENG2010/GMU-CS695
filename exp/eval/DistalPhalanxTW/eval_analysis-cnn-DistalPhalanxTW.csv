@@ -1,0 +1,2 @@
+model,dataset,acc_train_mean,acc_test_mean,time_train_mean,time_test_mean
+cnn,DistalPhalanxTW,0.9635000000000001,0.6575539568345323,24.348186739347874,0.08112850822508336

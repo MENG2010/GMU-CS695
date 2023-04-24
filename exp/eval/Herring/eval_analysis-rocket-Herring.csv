@@ -1,0 +1,2 @@
+model,dataset,acc_train_mean,acc_test_mean,time_train_mean,time_test_mean
+rocket-ridge,Herring,1.0,0.625,0.8208843113854527,0.6996673690155149

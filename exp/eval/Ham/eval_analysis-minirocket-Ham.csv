@@ -1,0 +1,2 @@
+model,dataset,acc_train_mean,acc_test_mean,time_train_mean,time_test_mean
+minirocket-ridge,Ham,1.0,0.7257142857142858,0.23475545905530454,0.12723220903426408

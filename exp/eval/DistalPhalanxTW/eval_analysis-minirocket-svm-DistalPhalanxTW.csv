@@ -1,0 +1,2 @@
+model,dataset,acc_train_mean,acc_test_mean,time_train_mean,time_test_mean
+minirocket-svm,DistalPhalanxTW,1.0,0.6920863309352517,0.33971008788794277,0.15335054825991393

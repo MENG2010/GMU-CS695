@@ -1,0 +1,2 @@
+model,dataset,acc_train_mean,acc_test_mean,time_train_mean,time_test_mean
+minirocket-ridge,ECGFiveDays,1.0,1.0,0.15264910478144883,0.23782178834080697

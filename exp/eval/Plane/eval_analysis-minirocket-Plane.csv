@@ -1,0 +1,2 @@
+model,dataset,acc_train_mean,acc_test_mean,time_train_mean,time_test_mean
+minirocket-ridge,Plane,1.0,1.0,0.1940128069370985,0.08681860137730837

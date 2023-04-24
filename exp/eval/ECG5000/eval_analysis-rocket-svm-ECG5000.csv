@@ -1,0 +1,2 @@
+model,dataset,acc_train_mean,acc_test_mean,time_train_mean,time_test_mean
+rocket-svm,ECG5000,1.0,0.9428888888888889,2.0981688102707268,17.618154396116733

@@ -278,7 +278,7 @@ def form_cliques(p_values, nnames):
     return networkx.find_cliques(g)
 
 
-def draw_cd_diagram(df_perf=None, alpha=0.05, title=None, labels=False):
+def draw_cd_diagram(df_perf=None, alpha=0.05, title=None, labels=False, filepath=None):
     """
     Draws the critical difference diagram given the list of pairwise classifiers that are
     significant or not
@@ -301,7 +301,10 @@ def draw_cd_diagram(df_perf=None, alpha=0.05, title=None, labels=False):
         }
     if title:
         plt.title(title,fontdict=font, y=0.9, x=0.5)
-    plt.savefig('cd-diagram.png',bbox_inches='tight')
+    
+    filepath = 'cd-diagram.png' if not filepath else filepath
+    plt.savefig(filepath, bbox_inches='tight')
+
 
 def wilcoxon_holm(alpha=0.05, df_perf=None):
     """

@@ -1,2 +1,2 @@
 model,dataset,acc_train_mean,acc_test_mean,time_train_mean,time_test_mean
-rocket-svm,Coffee,1.0,1.0,0.4143235497991554,0.28006813139654696
+rocket-svm,Herring,1.0,0.615625,0.7518314746092074,0.5817048579920083

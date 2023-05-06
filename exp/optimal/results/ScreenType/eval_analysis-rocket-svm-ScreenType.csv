@@ -1,0 +1,2 @@
+model,dataset,acc_train_mean,acc_test_mean,time_train_mean,time_test_mean
+rocket-svm,ScreenType,0.9557333333333334,0.4762666666666667,5.016435786010698,4.641936831816565

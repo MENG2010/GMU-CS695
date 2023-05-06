@@ -1,0 +1,2 @@
+model,dataset,acc_train_mean,acc_test_mean,time_train_mean,time_test_mean
+minirocket-svm,NonInvasiveFetalECGThorax2,0.9992222222222222,0.9606106870229008,3.4925596705870703,11.64764755400829

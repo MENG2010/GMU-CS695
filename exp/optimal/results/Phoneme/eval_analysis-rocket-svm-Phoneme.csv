@@ -1,0 +1,2 @@
+model,dataset,acc_train_mean,acc_test_mean,time_train_mean,time_test_mean
+rocket-svm,Phoneme,0.6205607476635514,0.2937763713080169,3.7640844363952057,29.78314748801058

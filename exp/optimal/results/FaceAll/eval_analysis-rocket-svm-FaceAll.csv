@@ -1,0 +1,2 @@
+model,dataset,acc_train_mean,acc_test_mean,time_train_mean,time_test_mean
+rocket-svm,FaceAll,1.0,0.7975147928994082,2.7706879707984626,9.902347962197382

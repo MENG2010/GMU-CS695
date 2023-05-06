@@ -1,0 +1,2 @@
+model,dataset,acc_train_mean,acc_test_mean,time_train_mean,time_test_mean
+minirocket-svm,ProximalPhalanxTW,0.9995,0.7931707317073171,0.4742427044082433,0.28836784618906675

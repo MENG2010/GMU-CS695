@@ -1,0 +1,2 @@
+model,dataset,acc_train_mean,acc_test_mean,time_train_mean,time_test_mean
+rocket-svm,InsectWingbeatSound,0.9954545454545455,0.638989898989899,1.3156620497931726,10.253133119817358

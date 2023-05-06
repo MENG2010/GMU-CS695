@@ -1,0 +1,2 @@
+model,dataset,acc_train_mean,acc_test_mean,time_train_mean,time_test_mean
+minirocket-svm,OliveOil,1.0,0.9066666666666668,0.19573756720637903,0.06975102700525895

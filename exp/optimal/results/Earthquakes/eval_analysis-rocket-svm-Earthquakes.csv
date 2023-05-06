@@ -1,0 +1,2 @@
+model,dataset,acc_train_mean,acc_test_mean,time_train_mean,time_test_mean
+rocket-svm,Earthquakes,0.8198757763975155,0.7482014388489209,2.809180813014973,1.6895937487948687

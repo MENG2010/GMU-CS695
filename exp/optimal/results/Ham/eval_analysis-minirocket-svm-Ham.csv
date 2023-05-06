@@ -1,0 +1,2 @@
+model,dataset,acc_train_mean,acc_test_mean,time_train_mean,time_test_mean
+minirocket-svm,Ham,1.0,0.7371428571428572,0.22545327258994802,0.10629685638705269

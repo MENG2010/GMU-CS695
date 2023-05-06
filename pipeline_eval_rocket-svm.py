@@ -73,7 +73,7 @@ def eval(feat_extractor, classifier, dataset):
     print(f'[INFO] test score: {score}; cost: {test_cost}')
     return test_cost, score, len(y_test)
 
-    
+
 if __name__ == '__main__':
     eval_scores = [
         ['model', 'dataset', 'round', 'acc_train', 'acc_test', 'time_train', 'time_test', 'train_size', 'test_size']

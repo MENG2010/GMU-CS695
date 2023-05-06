@@ -73,7 +73,7 @@ def reshape(data, extractor=None):
                     reshaped_data[sample_id][0][val_id//2] = data[sample_id][val_id]
                 else:
                     reshaped_data[sample_id][1][val_id//2] = data[sample_id][val_id]
-    elif extractor == 'minirocket':  # extractor is 'minirocket'
+    elif extractor == 'minirocket':
         for sample_id in range(num_samples):
             for val_id in range(num_values):
                 if val_id % 4 == 0:

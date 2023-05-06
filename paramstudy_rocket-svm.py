@@ -36,7 +36,8 @@ model_dir = 'exp/param_study/models'
 
 extractor_name = 'rocket'
 model_name = 'svm'
-report_pattern = 'rocket-svm-tuning'
+report_pattern = f'{extractor_name}-{model_name}-tuning'
+
 
 def tune_parameters(dataset):
     # load training dataset
@@ -69,9 +70,9 @@ def tune_parameters(dataset):
     
     estimators = GridSearchCV(classifier, param_grid, cv=5, n_jobs=n_jobs).fit(feature_train, y_train)
     
-    estimators.best_params_
-    estimators.best_score_
-    estimators.best_estimator_
+    # estimators.best_params_
+    # estimators.best_score_
+    # estimators.best_estimator_
     
     return estimators, feat_extractor
     
@@ -88,7 +89,7 @@ def eval(feat_extractor, classifier, dataset):
     return test_cost, score, len(y_test)
 
     
-if __name__ == '__main__':    
+if __name__ == '__main__':
     best_scores = [['dataset', 'acc_train', 'acc_test', 'best_params']]
     
     for dataset in datasets:
@@ -96,7 +97,7 @@ if __name__ == '__main__':
         eval_path = os.path.join(report_dir, dataset)
         Path(eval_path).mkdir(parents=True, exist_ok=True)
         
-        model_path = os.path.join('exp', 'models', 'svm', dataset)
+        model_path = os.path.join(model_dir, 'svm', dataset)
         Path(model_path).mkdir(parents=True, exist_ok=True)
         
         estimators, feat_extractor = tune_parameters(dataset=dataset)
@@ -115,14 +116,14 @@ if __name__ == '__main__':
             [dataset, estimators.best_score_, acc_test, estimators.best_params_]
         )
         print(f'[INFO] best scores: {estimators.best_score_}@\n{estimators.best_params_}')
-                
+        
         filename = f'track-{report_pattern}-{dataset}.csv'
         filepath = os.path.join(eval_path, filename)
         print(f'[INFO] Save evaluation analysis to {filepath}')
         report = pd.DataFrame(estimators.cv_results_)
         report.to_csv(filepath, index=False)
         print('-'*80)
-        
+    
     filename = f'best-{extractor_name}-{model_name}.csv'
     filepath = os.path.join(report_dir, filename)
     print(f'[INFO] Save evaluation scores to {filepath}')

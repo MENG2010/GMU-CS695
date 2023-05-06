@@ -5,3 +5,4 @@ __pycache__/
 .ipynb_checkpoints/
 exp/models/
 run_docker.sh
+*.pkl

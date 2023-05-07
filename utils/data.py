@@ -93,6 +93,17 @@ def reshape(data, extractor=None):
     return reshaped_data
 
 
+def df_to_dict(data):
+    params = {}
+    dataset = data['dataset']
+    configs = data['best_params']
+    
+    for key in dataset.keys():
+        params[dataset[key]] = configs[key]
+        
+    return params
+
+
 def test():
     """Test load_dataset function."""
     name = 'Beef'

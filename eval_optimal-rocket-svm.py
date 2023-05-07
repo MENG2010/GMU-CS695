@@ -18,7 +18,7 @@ from sklearn.model_selection import GridSearchCV
 
 from sktime.transformations.panel.rocket import Rocket
 
-from utils.data import load_dataset
+from utils.data import load_dataset, df_to_dict
 
 effective_datasets = ['CBF', 'Coffee', 'DistalPhalanxTW', 'ECG5000', 'ECGFiveDays', 'FaceAll', 
             'GunPoint', 'InsectWingbeatSound', 'MiddlePhalanxOutlineCorrect', 'NonInvasiveFetalECGThorax2', 'OliveOil', 'Plane', 'ProximalPhalanxTW', 'ShapeletSim',
@@ -90,17 +90,6 @@ def eval(feat_extractor, classifier, dataset):
     return test_cost, score, len(y_test)
 
 
-def convert_to_dict(data):
-    params = {}
-    dataset = data['dataset']
-    configs = data['best_params']
-    
-    for key in dataset.keys():
-        params[dataset[key]] = configs[key]
-        
-    return params
-
-
 if __name__ == '__main__':
     eval_scores = [
         ['model', 'dataset', 'round', 'acc_train', 'acc_test', 'time_train', 'time_test', 'train_size', 'test_size']
@@ -110,7 +99,7 @@ if __name__ == '__main__':
     ]
     
     optimal_params = pd.read_csv(optimal_filepath)[['dataset', 'best_params']].to_dict()
-    optimal_params = convert_to_dict(optimal_params)
+    optimal_params = df_to_dict(optimal_params)
     print(optimal_params)
     
     for dataset in datasets:

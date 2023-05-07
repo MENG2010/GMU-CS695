@@ -1,0 +1,2 @@
+model,dataset,acc_train_mean,acc_test_mean,time_train_mean,time_test_mean
+minirocket-cnn,Ham,0.9119266055045872,0.6514285714285715,32.499077842998666,0.7498773254017579

@@ -1,0 +1,2 @@
+model,dataset,acc_train_mean,acc_test_mean,time_train_mean,time_test_mean
+minirocket-cnn,MiddlePhalanxOutlineCorrect,0.9923333333333334,0.7828178694158074,126.26980836699803,1.8948101665999275

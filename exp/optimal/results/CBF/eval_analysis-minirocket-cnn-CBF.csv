@@ -1,0 +1,2 @@
+model,dataset,acc_train_mean,acc_test_mean,time_train_mean,time_test_mean
+minirocket-cnn,CBF,1.0,0.9977777777777778,8.319961074799357,5.692321543801517

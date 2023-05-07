@@ -1,0 +1,2 @@
+model,dataset,acc_train_mean,acc_test_mean,time_train_mean,time_test_mean
+rocket-cnn,OliveOil,0.5733333333333334,0.5066666666666666,23.968161639603203,0.5363665480021155

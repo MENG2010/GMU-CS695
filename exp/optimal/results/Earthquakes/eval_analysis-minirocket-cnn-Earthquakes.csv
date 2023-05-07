@@ -1,0 +1,2 @@
+model,dataset,acc_train_mean,acc_test_mean,time_train_mean,time_test_mean
+minirocket-cnn,Earthquakes,0.9559006211180124,0.7050359712230216,104.51150226920144,0.9784414572000969

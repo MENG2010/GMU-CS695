@@ -1,0 +1,7 @@
+mean_fit_time,std_fit_time,mean_score_time,std_score_time,param_activation,param_kernel_size,param_n_conv_layers,params,split0_test_score,split1_test_score,split2_test_score,mean_test_score,std_test_score,rank_test_score
+6.313258806864421,0.1325475210674987,0.07415056228637695,0.004397868933462766,linear,2,1,"{'activation': 'linear', 'kernel_size': 2, 'n_conv_layers': 1}",1.0,1.0,1.0,1.0,0.0,1
+7.637673219045003,0.029692663103160953,0.07657686869303386,0.002752659921916427,linear,2,2,"{'activation': 'linear', 'kernel_size': 2, 'n_conv_layers': 2}",1.0,1.0,1.0,1.0,0.0,1
+8.133749405543009,0.211230917700733,0.09125455220540364,0.007556755714812848,linear,2,3,"{'activation': 'linear', 'kernel_size': 2, 'n_conv_layers': 3}",1.0,1.0,1.0,1.0,0.0,1
+6.496915102005005,0.05699815606657938,0.06595389048258464,0.0009398819306193802,linear,3,1,"{'activation': 'linear', 'kernel_size': 3, 'n_conv_layers': 1}",1.0,1.0,1.0,1.0,0.0,1
+7.913896958033244,0.1378644850968772,0.07163341840108235,0.0010830529771058508,linear,3,2,"{'activation': 'linear', 'kernel_size': 3, 'n_conv_layers': 2}",1.0,1.0,1.0,1.0,0.0,1
+8.482231775919596,0.15810562892461366,0.07731978098551433,0.0025453968612867976,linear,3,3,"{'activation': 'linear', 'kernel_size': 3, 'n_conv_layers': 3}",1.0,1.0,1.0,1.0,0.0,1

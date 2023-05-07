@@ -1,0 +1,2 @@
+model,dataset,acc_train_mean,acc_test_mean,time_train_mean,time_test_mean
+rocket-cnn,FaceAll,0.875,0.8048520710059173,259.73009974939635,20.698586476198397

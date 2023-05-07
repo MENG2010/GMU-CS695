@@ -1,0 +1,2 @@
+model,dataset,acc_train_mean,acc_test_mean,time_train_mean,time_test_mean
+minirocket-cnn,Phoneme,0.6971962616822429,0.1591772151898734,73.72884774239938,13.430916027601052

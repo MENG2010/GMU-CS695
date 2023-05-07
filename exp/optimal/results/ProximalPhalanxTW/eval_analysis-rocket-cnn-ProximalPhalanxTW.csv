@@ -1,0 +1,2 @@
+model,dataset,acc_train_mean,acc_test_mean,time_train_mean,time_test_mean
+rocket-cnn,ProximalPhalanxTW,0.9100000000000001,0.7863414634146342,266.7417230727966,2.5700254601979395

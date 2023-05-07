@@ -1,0 +1,2 @@
+model,dataset,acc_train_mean,acc_test_mean,time_train_mean,time_test_mean
+rocket-cnn,Herring,0.896875,0.603125,44.21009814640274,1.0793104612006572

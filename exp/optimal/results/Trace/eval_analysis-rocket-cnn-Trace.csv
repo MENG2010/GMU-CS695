@@ -1,0 +1,2 @@
+model,dataset,acc_train_mean,acc_test_mean,time_train_mean,time_test_mean
+rocket-cnn,Trace,0.99,0.99,73.96107897780021,1.4104077070049243

@@ -1,0 +1,2 @@
+model,dataset,acc_train_mean,acc_test_mean,time_train_mean,time_test_mean
+minirocket-cnn,Plane,0.8457142857142858,0.8228571428571427,37.25882159400062,0.7262382606000756

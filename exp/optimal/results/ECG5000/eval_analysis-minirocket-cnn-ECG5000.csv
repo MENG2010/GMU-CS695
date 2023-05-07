@@ -1,0 +1,2 @@
+model,dataset,acc_train_mean,acc_test_mean,time_train_mean,time_test_mean
+minirocket-cnn,ECG5000,0.9987999999999999,0.9399111111111111,141.83796233140166,28.5545729304009

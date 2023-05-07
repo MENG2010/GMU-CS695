@@ -1,0 +1,2 @@
+model,dataset,acc_train_mean,acc_test_mean,time_train_mean,time_test_mean
+rocket-cnn,ECGFiveDays,1.0,0.9909407665505225,15.698561219399561,10.508220090405667

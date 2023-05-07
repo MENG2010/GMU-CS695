@@ -4,5 +4,7 @@ datasets/
 __pycache__/
 .ipynb_checkpoints/
 exp/models/
+exp/param_study/models/
+exp/optimal/models/
 run_docker.sh
 *.pkl

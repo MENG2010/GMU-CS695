@@ -8,3 +8,4 @@ exp/param_study/models/
 exp/optimal/models/
 run_docker.sh
 *.pkl
+*.tar

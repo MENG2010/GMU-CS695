@@ -278,14 +278,23 @@ def form_cliques(p_values, nnames):
     return networkx.find_cliques(g)
 
 
-def draw_cd_diagram(df_perf=None, alpha=0.05, title=None, labels=False, filepath=None):
+def draw_cd_diagram(df_perf=None, alpha=0.05, 
+                    category=None, sort_by=None, metric=None,
+                    title=None, labels=False, 
+                    filepath=None):
     """
     Draws the critical difference diagram given the list of pairwise classifiers that are
     significant or not
     """
-    p_values, average_ranks, _ = wilcoxon_holm(df_perf=df_perf, alpha=alpha)
+    p_values, average_ranks, _ = wilcoxon_holm(
+        df_perf=df_perf, 
+        alpha=alpha,
+        category=category,
+        sort_by=sort_by,
+        metric=metric,
+        )
 
-    print(average_ranks)
+    print('Average ranks:\n', average_ranks)
 
     for p in p_values:
         print(p)
@@ -305,28 +314,35 @@ def draw_cd_diagram(df_perf=None, alpha=0.05, title=None, labels=False, filepath
     plt.savefig(filepath, bbox_inches='tight')
 
 
-def wilcoxon_holm(alpha=0.05, df_perf=None):
+def wilcoxon_holm(alpha=0.05, df_perf=None, 
+                  category='classifier_name', 
+                  sort_by='dataset_name', 
+                  metric='accuracy'):
     """
     Applies the wilcoxon signed rank test between each pair of algorithm and then use Holm
     to reject the null's hypothesis
     """
-    print(pd.unique(df_perf['classifier_name']))
+    print('Categories:', pd.unique(df_perf[category]))
     # count the number of tested datasets per classifier
-    df_counts = pd.DataFrame({'count': df_perf.groupby(
-        ['classifier_name']).size()}).reset_index()
+    df_counts = pd.DataFrame({'count': df_perf.groupby([category]).size()}).reset_index()
+    print(f'Counts: {df_counts}')
+    
     # get the maximum number of tested datasets
     max_nb_datasets = df_counts['count'].max()
     # get the list of classifiers who have been tested on nb_max_datasets
     classifiers = list(df_counts.loc[df_counts['count'] == max_nb_datasets]
-                       ['classifier_name'])
+                       [category])
+    print(f'Classifiers: {classifiers}')
     # test the null hypothesis using friedman before doing a post-hoc analysis
     friedman_p_value = friedmanchisquare(*(
-        np.array(df_perf.loc[df_perf['classifier_name'] == c]['accuracy'])
+        np.array(df_perf.loc[df_perf[category] == c][metric])
         for c in classifiers))[1]
-    if friedman_p_value >= alpha:
-        # then the null hypothesis over the entire classifiers cannot be rejected
-        print('the null hypothesis over the entire classifiers cannot be rejected')
-        exit()
+    
+    # if friedman_p_value >= alpha:
+    #     # then the null hypothesis over the entire classifiers cannot be rejected
+    #     print('the null hypothesis over the entire classifiers cannot be rejected')
+    #     print(f'p-value: {friedman_p_value}')
+    #     exit()
     # get the number of classifiers
     m = len(classifiers)
     # init array that contains the p-values calculated by the Wilcoxon signed rank test
@@ -336,14 +352,14 @@ def wilcoxon_holm(alpha=0.05, df_perf=None):
         # get the name of classifier one
         classifier_1 = classifiers[i]
         # get the performance of classifier one
-        perf_1 = np.array(df_perf.loc[df_perf['classifier_name'] == classifier_1]['accuracy']
+        perf_1 = np.array(df_perf.loc[df_perf[category] == classifier_1][metric]
                           , dtype=np.float64)
         for j in range(i + 1, m):
             # get the name of the second classifier
             classifier_2 = classifiers[j]
             # get the performance of classifier one
-            perf_2 = np.array(df_perf.loc[df_perf['classifier_name'] == classifier_2]
-                              ['accuracy'], dtype=np.float64)
+            perf_2 = np.array(df_perf.loc[df_perf[category] == classifier_2]
+                              [metric], dtype=np.float64)
             # calculate the p_value
             p_value = wilcoxon(perf_1, perf_2, zero_method='pratt')[1]
             # appen to the list
@@ -365,14 +381,14 @@ def wilcoxon_holm(alpha=0.05, df_perf=None):
             break
     # compute the average ranks to be returned (useful for drawing the cd diagram)
     # sort the dataframe of performances
-    sorted_df_perf = df_perf.loc[df_perf['classifier_name'].isin(classifiers)]. \
-        sort_values(['classifier_name', 'dataset_name'])
+    sorted_df_perf = df_perf.loc[df_perf[category].isin(classifiers)]. \
+        sort_values([category, sort_by])
     # get the rank data
-    rank_data = np.array(sorted_df_perf['accuracy']).reshape(m, max_nb_datasets)
+    rank_data = np.array(sorted_df_perf[metric]).reshape(m, max_nb_datasets)
 
     # create the data frame containg the accuracies
     df_ranks = pd.DataFrame(data=rank_data, index=np.sort(classifiers), columns=
-    np.unique(sorted_df_perf['dataset_name']))
+    np.unique(sorted_df_perf[sort_by]))
 
     # number of wins
     dfff = df_ranks.rank(ascending=False)

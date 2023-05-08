@@ -18,3 +18,10 @@ Perform parameter study to find the optimal training configuration for individua
 ## Plot CD diagram
 
 Use `plot_cd_diagram.py` to plot CD diagrams.
+
+
+## Structure
+
+1. All experimental results will be put in `exp` folder.
+2. Results of parameter studies are in `exp/param_study`.
+3. Results of evaluation with optimal configurations are in `exp/optimal`.

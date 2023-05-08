@@ -6,9 +6,15 @@ Install the following packages:
 - [sktime](https://github.com/sktime/sktime#hourglass_flowing_sand-install-sktime) with deep-learning dependencies -- for TSC development.
 - [networkx](https://pypi.org/project/networkx/) -- for CD-diagram analysis and plot.
 
-## Meta
+## Parameter Study
 
+Perform parameter study to find the optimal training configuration for individual datasets for each time series classifier. Scripts for parameter studies start with `paramstudy`.
 
+## Evaluate TSCs
 
+1. Evaluate datasets using the optimal TSCs learned from the `Parameter Study` section with scripts starting with `eval_optimal`.
+2. Evaluate baseline TSCs using scripts `pipeline_eval_rocket-ridge.py`, `pipeline_eval_minirocket-ridge.py`, and `pipeline_eval_cnn.py`.
 
-## Evaluate baseline TSCs
+## Plot CD diagram
+
+Use `plot_cd_diagram.py` to plot CD diagrams.
